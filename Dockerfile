@@ -4,7 +4,7 @@
 
 
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
-ARG PHP_VERSION=8.1
+ARG PHP_VERSION=7.4
 ARG CADDY_VERSION=2
 
 # "php" stage
@@ -90,7 +90,7 @@ ARG STABILITY="stable"
 ENV STABILITY ${STABILITY}
 
 # Allow to select skeleton version
-ARG SYMFONY_VERSION=""
+ARG SYMFONY_VERSION="5.2.*"
 ENV SYMFONY_VERSION ${SYMFONY_VERSION}
 
 # Download the Symfony skeleton and leverage Docker cache layers
